@@ -8,6 +8,8 @@ import App from '../App';
 import { NamesInput } from '../components/NamesInput';
 import { GroupsDisplay } from '../components/GroupsDisplay';
 
+import Select from 'react-select';
+
 it('renders without crashing', () => {
   const div = document.createElement('div');
 
@@ -35,6 +37,10 @@ it('renders all components correctly', () => {
     <NamesInput />,
     <GroupsDisplay />
   ])).to.equal(true);
+
+  const wrapper2 = shallow(<NamesInput />);
+
+  expect(wrapper2.containsAllMatchingElements([<Select />]));
 });
 
 /* ------- NamesInput -------*/
