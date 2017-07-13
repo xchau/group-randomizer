@@ -44,7 +44,11 @@ it('updates state on text input', () => {
   wrapper.instance().handleInput('Hoa, Bell, Jaye');
 
   expect(wrapper.state('names')).to.eql('Hoa, Bell, Jaye');
+});
 
+it('updates state on number of groups selection', () => {
+  const wrapper = shallow(<App />);
 
-  // expect(wrapper.state('names')).to.eql(['Hoa', 'Bell', 'Jaye']);
+  wrapper.instance().handleNumSelect({label: "5", value: 5});
+  expect(wrapper.state('groupSize')).to.eql({label: "5", value: 5});
 });
