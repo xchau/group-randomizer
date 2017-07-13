@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 
-import { NameInput } from './components/NameInput';
+import { NamesInput } from './components/NamesInput';
+import { GroupsDisplay } from './components/GroupsDisplay';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      names: [],
-      test: ''
+      names: '',
+      groups: {}
     };
 
     this.handleInput = this.handleInput.bind(this);
@@ -17,17 +18,22 @@ class App extends Component {
 
   handleInput(text) {
     this.setState({
-      test: text
+      names: text
     });
+  }
+
+  handleSubmit() {
+    const set = this.state.names.split(',').map(elem => elem.trim()).filter(elem => elem);
   }
 
   render() {
     return (
       <div className="App">
         <p className="App-Title">Group Randomizer</p>
-        <NameInput
+        <NamesInput
           handleInput={this.handleInput}
         />
+        <GroupsDisplay />
       </div>
     );
   }
