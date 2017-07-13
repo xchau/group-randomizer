@@ -1,0 +1,17 @@
+.NameInput-Container {
+  display: flex;
+  justify-content: center;
+  margin: 5px;
+  width: 80%;
+}
+
+.NameInput-InputField, .NameInput-Form {
+  width: 100%;
+}
+
+.NameInput-InputField {
+  border: 1px solid #c2c2c2;
+  border-radius: 6px; 
+  height: 30px;
+  padding: 0 5px;
+}
