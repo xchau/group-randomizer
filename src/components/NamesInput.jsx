@@ -33,4 +33,4 @@ export const NamesInput = (props) => {
       </form>
     </div>
   );
-}
+};

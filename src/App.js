@@ -47,7 +47,6 @@ class App extends Component {
   render() {
     return (
       <div className="App-Container">
-        <p className="App-Title">GROUP RANDOMIZER</p>
         <NamesInput
           handleInput={this.handleInput}
           handleSubmit={this.handleSubmit}
