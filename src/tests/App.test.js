@@ -61,17 +61,3 @@ it('updates state with number of groups on select', () => {
 
   expect(wrapper.state('groupSize')).to.eql({label: "4", value: 4});
 });
-
-it('updates state with groups on submit', () => {
-  // const wrapper = shallow(<App />);
-  //
-  // wrapper.instance().handleInput('dave, zahra, chris');
-  // wrapper.instance().handleNumSelect({label: "3", value: 3});
-  // wrapper.instance().handleSubmit(event);
-  //
-  // expect(wrapper.state('groups')).to.eql({
-  //   '1': ['Dave'],
-  //   '2': ['Zahra'],
-  //   '3': ['Chris']
-  // });
-});
