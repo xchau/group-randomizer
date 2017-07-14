@@ -37,7 +37,9 @@ it('renders all components correctly', () => {
     <NamesInput />,
     <GroupsDisplay />
   ])).to.equal(true);
+});
 
+it('renders dropdown correctly', () => {
   const wrapper2 = shallow(<NamesInput />);
 
   expect(wrapper2.containsAllMatchingElements([<Select />]));

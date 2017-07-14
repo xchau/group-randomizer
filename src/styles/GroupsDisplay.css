@@ -1,0 +1,12 @@
+.GroupsDisplay-Container {
+  padding: 0 60px !important;
+}
+
+.GroupsDisplay-NameBox {
+  border: 2px solid lightcoral;
+  border-radius: 4px;
+  min-height: 200px;
+  margin-bottom: 20px;
+  padding: 18px 12px;
+  text-align: center;
+}

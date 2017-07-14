@@ -1,7 +1,5 @@
 .NamesInput-Container {
-  display: flex;
-  justify-content: center;
-  margin: 5px;
+  margin: 0 auto;
   min-height: 120px;
   width: 70%;
 }
@@ -34,6 +32,7 @@
   border: 1px solid #c2c2c2;
   border-radius: 4px;
   height: 30px;
+  margin-bottom: 20px;
   padding: 3px 7px;
 }
 
