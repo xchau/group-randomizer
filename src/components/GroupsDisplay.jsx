@@ -4,32 +4,24 @@ import '../styles/GroupsDisplay.css';
 import { Grid, Row, Col } from 'react-flexbox-grid';
 
 export const GroupsDisplay = (props) => {
+  const groups = props.groups,
+        colSize = 12 / props.groups.length;
+
   return (
     <Grid
       className="GroupsDisplay-Container"
       fluid
     >
-      <Row>
-        <Col xs={12} sm={4} md={3}>
-          <div className="GroupsDisplay-NameBox">
-            A
-          </div>
-        </Col>
-        <Col xs={12} sm={4} md={3}>
-          <div className="GroupsDisplay-NameBox">
-            B
-          </div>
-        </Col>
-        <Col xs={12} sm={4} md={3}>
-          <div className="GroupsDisplay-NameBox">
-            C
-          </div>
-        </Col>
-        <Col xs={12} sm={4} md={3}>
-          <div className="GroupsDisplay-NameBox">
-            D
-          </div>
-        </Col>
+      <Row className="GroupsDisplay-Row">
+        {
+          groups.map((group, i) => {
+            return <Col key={i} xs={12} md={colSize}>
+              <div className="GroupsDisplay-NameBox">
+                {group.join(', ')}
+              </div>
+            </Col>
+          })
+        }
       </Row>
     </Grid>
   )

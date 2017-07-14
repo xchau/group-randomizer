@@ -19,7 +19,7 @@ describe('Test utility functions', () => {
     it('should evenly split arr of names into N groups', () => {
       const arr = ['A', 'B', 'C', 'D', 'E'];
 
-      expect(groupify(arr, 3)['1']).to.eql(['A', 'D']);
+      expect(groupify(arr, 3)[1]).to.eql(['B', 'E']);
     });
   });
 

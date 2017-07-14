@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './styles/App.css';
 
-import { createSet } from './utils/utils';
+import { createSet, groupify } from './utils/utils';
 import { NamesInput } from './components/NamesInput';
 import { GroupsDisplay } from './components/GroupsDisplay';
 
@@ -11,7 +11,7 @@ class App extends Component {
 
     this.state = {
       names: '',
-      groups: {},
+      groups: [],
       groupSize: { label: '2', value: 2 }
     };
 
@@ -31,6 +31,10 @@ class App extends Component {
 
     if (this.state.names) {
       let set = createSet(this.state.names);
+
+      this.setState({
+        groups: groupify(set, this.state.groupSize.value)
+      });
     }
   }
 
@@ -43,16 +47,17 @@ class App extends Component {
   render() {
     return (
       <div className="App-Container">
-        <p className="App-Title">Group Randomizer</p>
+        <p className="App-Title">GROUP RANDOMIZER</p>
         <NamesInput
           handleInput={this.handleInput}
           handleSubmit={this.handleSubmit}
           handleNumSelect={this.handleNumSelect}
           initialGroupSize={this.state.groupSize}
         />
-        <GroupsDisplay />
+        <GroupsDisplay
+          groups={this.state.groups}
+        />
       </div>
-
     );
   }
 }

@@ -19,24 +19,21 @@ export const shuffle = (arr) => {
 };
 
 export const groupify = (arr, n) => {
-  const groups = {};
-  let idx = 1;
+  const groups = new Array(n);
+  let idx = 0;
   let name;
 
   while (arr.length) {
     name = arr.shift();
 
-    if (!groups.hasOwnProperty(String(idx))) {
-      groups[String(idx)] = [];
-      groups[String(idx)].push(name);
-    }
-    else {
-      groups[String(idx)].push(name);
+    if (!groups[idx]) {
+      groups[idx] = [];
     }
 
+    groups[idx].push(name);
     idx += 1;
 
-    if (idx > n) idx = 1;
+    if (idx === n) idx = 0;
   }
 
   return groups;

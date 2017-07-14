@@ -1,11 +1,12 @@
 .NamesInput-Container {
   margin: 0 auto;
+  margin-bottom: 30px;
   min-height: 120px;
   width: 70%;
 }
 
 .NamesInput-InputField, .NamesInput-Form {
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   width: 100%;
 }
 
