@@ -6,7 +6,6 @@ import { Grid, Row, Col } from 'react-flexbox-grid';
 export const GroupsDisplay = (props) => {
   const groups = props.groups,
         colSize = 12 / props.groups.length;
-        console.log(groups);
 
   return (
     <Grid
