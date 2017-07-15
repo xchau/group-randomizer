@@ -13,7 +13,7 @@ export const NamesInput = (props) => {
         className="NamesInput-Form"
         onSubmit={(e) => props.handleSubmit(e)}
       >
-        <input
+        <textarea
           className="NamesInput-InputField"
           onChange={(e) => props.handleInput(e.target.value)}
           placeholder="Enter a list of comma separated names..."
