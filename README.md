@@ -1,4 +1,4 @@
-# Group RANDOMIZER
+# Group Randomizer
 
 ### Demo
 `https://xchau-group-randomizer.herokuapp.com`
